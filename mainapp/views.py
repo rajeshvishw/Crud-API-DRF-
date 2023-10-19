@@ -3,40 +3,6 @@ from rest_framework.views import APIView
 from .models import *
 from .serializers import webSerializer
 from rest_framework.response import Response
-
-# class webView(APIView):
-#     def get(self,request):
-#         get_data = webModel.objects.all()
-#         #If more data is coming then we can add pagination here.
-#         serializeData = webSerializer(get_data,many=True)
-#         return Response(serializeData.data)
-    
-#     def post(self,request):
-#         serializeData = webSerializer(data=request.data)
-#         if serializeData.is_valid():
-#             serializeData.save()
-#         return Response(serializeData.data)
-    
-#     def patch(self,request,pk):
-#         try:
-#             getdata = webModel.objects.get(id=pk) 
-#             serializdata = webSerializer(getdata,data=request.data)
-#             if serializdata.is_valid():
-#                 serializdata.save()
-#             return Response(serializdata.data)
-#         except:
-#             return Response({"status":"Invalid ID"})
-        
-#     def delete(self,request,pk):
-#         try:
-#             getdata = webModel.objects.get(id=pk)
-#             getdata.delete()
-#             return Response({"status":"data deleted"})
-#         except:
-#             return Response({"status":"Invalid ID"})
-
-
-
 from rest_framework import status
 
 class webView(APIView):
